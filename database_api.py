@@ -37,4 +37,5 @@ class database_api:
     def get_user_cart(user_id):
         return []
     
-    def 
+    def get_user_history(user_id):
+        return []
