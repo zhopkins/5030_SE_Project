@@ -7,7 +7,11 @@ class database_api:
         self.mgClient = MongoClient(url)
 
     #TODO
-    def create_Table():
+    def list_tables():
+        return 0
+
+    #TODO
+    def create_table():
         return 0
     
     #TODO   
@@ -21,3 +25,16 @@ class database_api:
     #TODO
     def delete_item():
         return 0
+
+    def check_user_login(username, password):
+        isUser = False
+
+        return isUser 
+
+    def get_product_list():
+        return []
+
+    def get_user_cart(user_id):
+        return []
+    
+    def 
