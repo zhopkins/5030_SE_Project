@@ -1,1 +1,2 @@
 user_id, username, encoded_password
+1234, foo_bar, bAr1234 
