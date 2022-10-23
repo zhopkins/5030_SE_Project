@@ -1,3 +1,4 @@
+import pymongo
 from pymongo import MongoClient
 
 class database_api:
@@ -11,11 +12,12 @@ class database_api:
                           "transaction_items": self.fe_database.transaction_items,
                           "user_accounts": self.fe_database.user_accounts,
                           "user_cart": self.fe_database.user_cart}
-    
+        
+
     def insert_items(self, table, new_entry_dic_array):
         return self.table_dic[table].insert_many(new_entry_dic_array)
     
-    def delete_item(self, ):
+    def delete_item(self,):
         return 0
 
     def add_user(self, username, password):
@@ -33,7 +35,6 @@ class database_api:
             a dictonary of the users account, will return None if the user dosen't exist
     """
     def check_user_login(self, username, password):
-        isUser = False
         user_collect = self.table_dic["user_accounts"]
         user_json = user_collect.find_one({"username": username, "encoded_password": password})
         return user_json 
