@@ -31,5 +31,5 @@ class Test_API_Class:
     #testing if query works for get_product_dic
     def test_get_product_dic_query(self):
         query_res = self.API.get_product_dic(1, {"prod_id": 1})
-        assert query_res["prod_id"][0] == 1
+        assert query_res[0]["prod_id"] == 1
     
