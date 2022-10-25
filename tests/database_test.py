@@ -18,7 +18,7 @@ class Test_API_Class:
 
     #test if items are added
     def test_inserting(self):
-        assert len(self.API.insert_items('user_accounts', self.test_user).inserted_ids) == 1
+        assert len(self.API.insert_items('user_accounts', [self.test_user]).inserted_ids) == 1
         
     #testing if items are deleted
     def test_deleting(self):
@@ -31,5 +31,5 @@ class Test_API_Class:
     #testing if query works for get_product_dic
     def test_get_product_dic_query(self):
         query_res = self.API.get_product_dic(1, {"prod_id": 1})
-        assert query_res["prod_id"] == 1
+        assert query_res["prod_id"][0] == 1
     
