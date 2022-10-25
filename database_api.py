@@ -17,8 +17,8 @@ class database_api:
     def insert_items(self, table, new_entry_dic_array):
         return self.table_dic[table].insert_many(new_entry_dic_array)
     
-    def delete_item(self,):
-        return 0
+    def delete_item(self, table, item_description):
+        return self.table_dic[table].delete_many(item_description)
 
     def add_user(self, username, password):
         return 0
@@ -42,8 +42,10 @@ class database_api:
     def get_product_dic(self, number_wanted = 1, product_query = {}):
         prod_list = []
         for entry in self.table_dic["products"].find(product_query):
-            if len(prod_list) != number_wanted:
+            if len(prod_list) < number_wanted:
                 prod_list.append(entry)
+            else:
+                break
 
         return prod_list
 
