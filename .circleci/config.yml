@@ -30,4 +30,9 @@ jobs:
 workflows:
   python_tests_workflow:
     jobs:
-      - run_python_tests
+    - run_python_tests:
+        filter:
+          branches:
+            only:
+             - main
+
