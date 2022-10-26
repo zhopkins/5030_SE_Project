@@ -31,7 +31,7 @@ workflows:
   python_tests_workflow:
     jobs:
     - run_python_tests:
-        filter:
+        filters:
           branches:
             only:
              - main
