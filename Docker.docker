@@ -1,4 +1,0 @@
-FROM python:latest
-WORKDIR /Users/ramug/OneDrive/Documents/5030_SE_Project/5030_SE_Project/tests
-COPY database_test.py ./
-CMD [ "python", "./database_test.py"]
