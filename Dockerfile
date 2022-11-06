@@ -1,7 +1,11 @@
-FROM nginx:1.10.1-alpine
+FROM python:3.10-alpine
 
-COPY src dest
+COPY requirements.txt /app/requirements.txt
 
-EXPOSE 80
+RUN pip install -r /app/requirements.txt
 
-CMD [ "executable" ]
+WORKDIR /app
+
+COPY /src /app
+
+CMD [ "python",  "app.py"]
