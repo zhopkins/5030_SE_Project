@@ -2,9 +2,10 @@
     // getting all values from the HTML form
     if(isset($_POST['submit']))
     {
-        $name = $_POST['Username'];
-        $pass = $_POST['Password'];
-        $rpass = $_POST['psw-repeat'];
+        $pid = $_POST['ProductId'];
+        $pname = $_POST['ProductName'];
+        $pri = $_POST['Price'];
+        $cat = $_POST['Category'];
     }
 
     // database details
@@ -23,25 +24,16 @@
     }
 
     // using sql to create a data entry query
-    $sql = "INSERT INTO user_details (name, password) VALUES ('$name', '$pass')";
+    $sql = "INSERT INTO product_details (id, pname, price, category) VALUES ('$pid', '$pname', '$pri', '$cat')";
   
     // send query to the database to add values and confirm if successful
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        echo "Successfully Registered!";
-        header('location:login.html');
+        echo "Entries added!";
     }
   
     // close connection
     mysqli_close($con);
 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <body>
-        <button type="submit" class="signupbtn" name="submit" id="submit"><a href="login.php">Go to Login Page</a></button>
-    </body>
-</html>
-
