@@ -25,6 +25,7 @@
 	color: white;
 	}
 	tr:nth-child(even) {background-color: #f2f2f2}
+
 </style>
 </head>
 
@@ -75,7 +76,15 @@
   		</div>
 		</nav>
 		<center>
+		<h2>Pesticide World!</h2>
+        <b>Search the Available Products: 
+          <input id="gfg" type="text" 
+                 placeholder="Search here">
+        </b>
+        <br>
+        <br>
 			<table>
+			<tbody id="products">
 				<tr>
 				<th>Product Id</th>
 				<th>Product Name</th>
@@ -100,7 +109,19 @@
 				} else { echo "0 results"; }
 				$conn->close();
 				?>
-			</table> 
+			</tbody>
+			</table>
+			<script>
+            $(document).ready(function() {
+                $("#gfg").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#products tr").filter(function() {
+                        $(this).toggle($(this).text()
+                        .toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        	</script> 
 			</center>
 
 

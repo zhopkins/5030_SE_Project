@@ -2,10 +2,7 @@
     // getting all values from the HTML form
     if(isset($_POST['submit']))
     {
-        $pid = $_POST['ProductId'];
-        $pname = $_POST['ProductName'];
-        $pri = $_POST['Price'];
-        $cat = $_POST['Category'];
+        $pid = $_POST['Id'];
     }
 
     // database details
@@ -23,14 +20,14 @@
         die("Connection failed!" . mysqli_connect_error());
     }
 
-    // using sql to create a data entry query
-    $sql = "UPDATE product_details SET pname='$pname', price='$pri', category='$cat' where id='$pid'";
+    // using sql to delete a product
+    $sql = "DELETE FROM product_details where id=$pid";
   
-    // send query to the database to add values and confirm if successful
+    //send query to the database to delete values and confirm if successful
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        echo "Successfully edited the product!";
+        echo "Product Deleted!";
     }
   
     // close connection
