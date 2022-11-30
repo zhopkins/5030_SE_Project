@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <html>
-    <body background="login.jpeg" style="background-repeat:calc()"  width= 80 height=100%>
+    <body background="C:\Users\nikhi\Downloads\login.jpeg" style="background-repeat:calc()"  width= 80 height=100%>
         <script src="login.js" ></script>
             <header>
                 <h1>Pesticide World!</h1>
@@ -109,14 +108,14 @@
             </style>
             </header>
             <main>
-                <form method="POST" action="con.php">
+                <form id="login_form" class="form_class" action="login/login-access.php" method="post">
         
                     <div class="form_div">
                         <label>Login:</label>
                         <input class="field_class" name="login_txt" type="text" placeholder="Enter User Id" autofocus><br>
                         <label>Password:</label>
                         <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Enter Password"><br>
-                        <button type="submit" class="submit_class" name="submit" id="submit">Login</button>
+                        <button class="submit_class" type="submit" form="login_form" onclick="return on_submit()"><a href="index.html">Login</a></button>
                         <center><p>or</p></center>
                         <button class="submit_class" type="submit" form="login_form" onclick="return on_submit()"><a href="PSD-Sign-up_page.html">Signup</a></button>
                     </div>
@@ -130,4 +129,4 @@
                 <p>Read Terms and Conditions :<a href="#">Terms & Conditions </a></p>
             </footer>
         </body>
-</html>
+</html>}
