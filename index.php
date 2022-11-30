@@ -80,8 +80,13 @@
         <b>Search the Available Products: 
           <input id="gfg" type="text" 
                  placeholder="Search here">
-        </b>
-        <br>
+        </b><br><br>
+		<form method="POST" action="cart_details.php">
+		<b>Add Product Id to Cart: 
+          <input type="text" name="ProductId" placeholder="Product Id">
+			<button type="submit" name="submit" id="submit">Add to Cart</button>
+		</b>
+		</form>
         <br>
 			<table>
 			<tbody id="products">
