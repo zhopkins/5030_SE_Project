@@ -1,0 +1,16 @@
+{
+    "user": [
+    {
+        "name" : "user1",
+        "cart" : []
+    },
+    {
+        "name" : "user2",
+        "cart" : []
+    },
+    {
+        "name" : "user3",
+        "cart" : []
+    }
+    ]
+}
