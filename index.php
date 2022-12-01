@@ -240,7 +240,6 @@
 		<div class="row">
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -254,7 +253,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -268,7 +266,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -282,7 +279,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
