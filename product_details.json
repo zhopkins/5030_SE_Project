@@ -1,0 +1,46 @@
+{
+    "products" : [
+        {
+            "id" : "1",
+            "pname" : "fert1",
+            "price" : 100, 
+            "category" : "Category-1"
+        },
+        {
+            "id" : "2",
+            "pname" : "fert2",
+            "price" : 1000, 
+            "category" : "Category-1"
+        },
+        {
+            "id" : "3",
+            "pname" : "fert3",
+            "price" : 20, 
+            "category" : "Category-1"
+        },
+        {
+            "id" : "4",
+            "pname" : "fert4",
+            "price" : 30, 
+            "category" : "Category-1"
+        },
+        {
+            "id" : "5",
+            "pname" : "fert5",
+            "price" : 5, 
+            "category" : "Category-2"
+        },
+        {
+            "id" : "6",
+            "pname" : "fert6",
+            "price" : 64, 
+            "category" : "Category-2"
+        },
+        {
+            "id" : "7",
+            "pname" : "fert7",
+            "price" : 345, 
+            "category" : "Category-2"
+        }
+    ]
+}
