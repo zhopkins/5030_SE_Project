@@ -80,8 +80,33 @@
         <b>Search the Available Products: 
           <input id="gfg" type="text" 
                  placeholder="Search here">
-        </b>
-        <br>
+        </b><br><br>
+		<form method="POST" action="">
+		<b>Add Product Id to Cart: 
+          <input type="text" name="ProductId" placeholder="Product Id">
+			<button type="submit" name="add_cart">Add to Cart</button>
+		</b>
+		</form>
+		<?php
+				if(array_key_exists('add_cart', $_POST)){
+					$strJson = file_get_contents("product_details.json");
+					$decodedJson = json_decode($strJson, true);
+					$array = $decodedJson["products"];
+					$userInput = $_POST["ProductId"];
+					
+					for ($x = 0; $x < count($array); $x++) {
+						if($array[$x]["id"] == $userInput){
+							echo "Added to Cart: " . $array[$x]["pname"];
+							//$json_obj = $array[$x]
+							//$strJson = file_get_contents("user_cart.json");
+							//$decodedJson = json_decode($strJson, true);
+							//$user_cart 
+						}
+					}
+
+					
+				}
+			?>
         <br>
 			<table>
 			<tbody id="products">
@@ -92,22 +117,31 @@
 				<th>Category</th>
 				</tr>
 				<?php
-				$conn = mysqli_connect("localhost", "root", "", "pesticide");
-				// Check connection
-				if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-				}
-				$sql = "SELECT id, pname, price, category FROM product_details";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-				// output data of each row
-				while($row = $result->fetch_assoc()) {
-				echo "<tr><td>" . $row["id"]. "</td><td>" . $row["pname"] . "</td><td>" . $row["price"] . "</td><td>"
-				. $row["category"]. "</td></tr>";
+				// $conn = mysqli_connect("localhost", "root", "", "pesticide");
+				// // Check connection
+				// if ($conn->connect_error) {
+				// die("Connection failed: " . $conn->connect_error);
+				// }
+				// $sql = "SELECT id, pname, price, category FROM product_details";
+				// $result = $conn->query($sql);
+				// if ($result->num_rows > 0) {
+				// //output data of each row
+				// while($row = $result->fetch_assoc()) {
+				// echo "<tr><td>" . $row["id"]. "</td><td>" . $row["pname"] . "</td><td>" . $row["price"] . "</td><td>"
+				// . $row["category"]. "</td></tr>";
+				// }
+				// echo "</table>";
+				// } else { echo "0 results"; }
+				// $conn->close();
+
+				//Grab products array from json
+				$strJson = file_get_contents("product_details.json");
+				$decodedJson = json_decode($strJson, true);
+				$array = $decodedJson["products"];
+				for ($x = 0; $x < count($array); $x++) {
+					echo "<tr><td>" . $array[$x]["id"]. "</td><td>" . $array[$x]["pname"] . "</td><td>" . $array[$x]["price"] . "</td><td>" . $array[$x]["category"]. "</td></tr>";
 				}
 				echo "</table>";
-				} else { echo "0 results"; }
-				$conn->close();
 				?>
 			</tbody>
 			</table>
@@ -206,7 +240,6 @@
 		<div class="row">
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -220,7 +253,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -234,7 +266,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
@@ -248,7 +279,6 @@
 			
 			<div class="col-md-3 profile-pic text-center">
 				<div class="img-box">
-				<img src="" class="img-responsive">
 				<ul>
 					<a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>

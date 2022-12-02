@@ -3,9 +3,6 @@
     if(isset($_POST['submit']))
     {
         $pid = $_POST['ProductId'];
-        $pname = $_POST['ProductName'];
-        $pri = $_POST['Price'];
-        $cat = $_POST['Category'];
     }
 
     // database details
@@ -24,13 +21,13 @@
     }
 
     // using sql to create a data entry query
-    $sql = "INSERT INTO product_details (id, pname, price, category) VALUES ('$pid', '$pname', '$pri', '$cat')";
+    $sql = "INSERT INTO cart_details SELECT * FROM product_details WHERE id='$pid'";
   
     // send query to the database to add values and confirm if successful
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        echo "Product Added!";
+        header('location:cart.php');
     }
   
     // close connection

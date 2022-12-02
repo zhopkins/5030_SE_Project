@@ -1,13 +1,4 @@
 <?php
-    // getting all values from the HTML form
-    if(isset($_POST['submit']))
-    {
-        $pid = $_POST['ProductId'];
-        $pname = $_POST['ProductName'];
-        $pri = $_POST['Price'];
-        $cat = $_POST['Category'];
-    }
-
     // database details
     $host = "localhost";
     $username = "root";
@@ -24,13 +15,13 @@
     }
 
     // using sql to create a data entry query
-    $sql = "INSERT INTO product_details (id, pname, price, category) VALUES ('$pid', '$pname', '$pri', '$cat')";
+    $sql = "DELETE FROM cart_details";
   
     // send query to the database to add values and confirm if successful
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        echo "Product Added!";
+        header('location:cart.php');
     }
   
     // close connection

@@ -1,5 +1,5 @@
 <html>
-    <body background="C:\Users\nikhi\Downloads\login.jpeg" style="background-repeat:calc()"  width= 80 height=100%>
+    <body background="login.jpeg" style="background-repeat:calc()"  width= 80 height=100%>
         <script src="login.js" ></script>
             <header>
                 <h1>Pesticide World!</h1>
@@ -108,7 +108,8 @@
             </style>
             </header>
             <main>
-                <form id="login_form" class="form_class" action="login/login-access.php" method="post">
+
+                <form method="POST" action="login_auth.php">
         
                     <div class="form_div">
                         <label>Login:</label>
@@ -118,9 +119,6 @@
                         <button class="submit_class" type="submit" form="login_form" onclick="return on_submit()"><a href="index.html">Login</a></button>
                         <center><p>or</p></center>
                         <button class="submit_class" type="submit" form="login_form" onclick="return on_submit()"><a href="PSD-Sign-up_page.html">Signup</a></button>
-                    </div>
-                    <div class="info_div">
-                        <p>Forgot Password ?<a href="register/reg-form.php">Click Here</a></p>
                     </div>
         
                 </form>
