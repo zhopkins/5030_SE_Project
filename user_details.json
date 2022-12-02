@@ -1,17 +1,1 @@
-{
-    "user": [
-    {
-        "name" : "user1",
-        "password" : "password1"
-    },
-    {
-        "name" : "user2",
-        "password" : "password2"
-    },
-    {
-        "name" : "user3",
-        "password" : "password3"
-    }
-    ]
-}
-
+{"user":[{"name":"user1","password":"password1"},{"name":"user2","password":"password2"},{"name":"user3","password":"password3"},{"name":"user4","password":"password4"}]}
