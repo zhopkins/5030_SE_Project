@@ -30,7 +30,7 @@
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        echo "Entries added!";
+        echo "Product Added!";
     }
   
     // close connection
