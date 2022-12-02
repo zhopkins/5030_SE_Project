@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <style>
+/*adding colors to the page uisng CSS*/
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
@@ -65,7 +66,9 @@ button:hover {
 }
 </style>
 <body>
-
+<!--add prouct form initiated-->
+<!--POST method is used to process the data of the form to database-->
+<!--All the action of this code is done by the Add_product.php file-->
 <form method="POST" action="Add_product.php" style="border:1px solid #ccc">
   <div class="container">
     <p>Please fill the below details to add aproduct.</p>
@@ -89,43 +92,40 @@ button:hover {
     </div>
   </div>
 </form>
+<!--add product form ended-->
+
+<!--delete a product form initiated-->
 <form method="POST" action="delete_product.php" style="border:1px solid #ccc">
   <div class="container">
     <p>Please fill the below details to delete aproduct.</p>
     <hr>
-
     <label for="ProductId"><b>Product Id</b></label>
     <input type="ProductId" name="Id" required placeholder="ProductId">
-
     <div class="clearfix">
       <button type="submit" class="signupbtn" name="submit" id="submit">Submit</button>
     </div>
   </div>
 </form>
+<!--delete form ended-->
+
+<!--Update form initiated-->
 <form method="POST" action="update_product.php" style="border:1px solid #ccc">
   <div class="container">
-
     <p>Please fill the below details to edit a product.</p>
     <hr>
-
     <label for="ProductId"><b>Product Id</b></label>
     <input type="ProductId" name="ProductId" required placeholder="ProductId">
-
     <label for="ProductName"><b>Product Name</b></label>
     <input type="ProductName" name="ProductName" required placeholder="ProductName">
-
     <label for="Price"><b>Price</b></label>
     <input type="Price" name="Price" required placeholder="Price">
-
     <label for="Category"><b>Category</b></label>
     <input type="Category" name="Category" required placeholder="Category">
-
     <div class="clearfix">
       <button type="submit" class="signupbtn" name="submit" id="submit">Submit</button>
     </div>
   </div>
 </form>
-
-
+<!--Update form ended-->
 </body>
 </html>
