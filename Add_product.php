@@ -23,7 +23,7 @@
         die("Connection failed!" . mysqli_connect_error());
     }
 
-    // using sql to create a data entry query
+    // using $sql to create a data entry query
     $sql = "INSERT INTO product_details (id, pname, price, category) VALUES ('$pid', '$pname', '$pri', '$cat')";
   
     // send query to the database to add values and confirm if successful

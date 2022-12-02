@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <body background="C:\Users\nikhi\Downloads\login.jpeg" style="background-repeat:calc()"  width= 80 height=100%>
+        <!-- importing javascript file to the page-->
         <script src="login.js" ></script>
             <header>
                 <h1>Pesticide World!</h1>
-                <style>
-                 <center>
-                {
+        <style>
+        /* adding colors to the page*/
+        center
+        {
             padding: 5px;
             margin: 1px;
         }
@@ -105,12 +107,13 @@
             color: white;
             font-weight: bold;
         }
-        </center>
-            </style>
-            </header>
+
+        </style>
+        </header>
             <main>
+                <!-- form created for entering username and password-->
                 <form method="POST" action="con.php">
-        
+
                     <div class="form_div">
                         <label>Login:</label>
                         <input class="field_class" name="login_txt" type="text" placeholder="Enter User Id" autofocus><br>
@@ -120,10 +123,11 @@
                         <center><p>or</p></center>
                         <button class="submit_class" type="submit" form="login_form" onclick="return on_submit()"><a href="PSD-Sign-up_page.html">Signup</a></button>
                     </div>
+                    <!-- forgot password  functionality-->
                     <div class="info_div">
                         <p>Forgot Password ?<a href="register/reg-form.php">Click Here</a></p>
                     </div>
-        
+
                 </form>
             </main>
             <footer>

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <style>
+/* Adding colors to the page */
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
@@ -66,7 +67,7 @@ button:hover {
 }
 </style>
 <body>
-
+<!--form created to  enter the user details -->
 <form method="POST" action="config.php" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
@@ -89,7 +90,9 @@ button:hover {
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
+      <!-- On cancel it is diverted to the login page-->
       <button type="button" class="cancelbtn"><a href="login.html">Cancel</a></button>
+      <!-- On sumbit the user details will be created in the table in database-->
       <button type="submit" class="signupbtn" name="submit" id="submit">Sign Up</button>
     </div>
   </div>

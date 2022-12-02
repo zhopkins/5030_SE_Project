@@ -23,7 +23,7 @@
         die("Connection failed!" . mysqli_connect_error());
     }
 
-    // using sql to delete a product
+    // using sql to update a product
     $sql = "UPDATE product_details SET pname=$pname, price=$pri, category=$cat where id=$pid";
   
     //send query to the database to delete values and confirm if successful
