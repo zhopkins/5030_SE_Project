@@ -41,4 +41,23 @@ class Test_php{
         return $num1;
         }
     }
+    //Function to update the product details
+    public function update($con) {
+        $user="UPDATE product_details SET pname='Product-2', price='$6', category='Category-2' where id='1'";
+        $result=mysqli_query($con,$user);
+        $num1=1;
+        if($result)
+        {
+        return $num1;
+        }
+    }
+    //Function to authenticate user
+    public function userLogin($con,$user) {
+        $result=mysqli_query($con,$user);
+        $num1=1;
+        if(mysqli_num_rows($result)==1)
+        {
+        return $num1;
+        }
+    }
 }

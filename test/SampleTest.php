@@ -47,5 +47,28 @@ class SampleTest extends \PHPUnit\Framework\TestCase{
         $result=$cal->emptycart($con);
         $this->assertEquals(1, $result);
     }
+    //Function to test update products feature
+    public function testcase5(){
+        $cal=new App\Test_php;
+        $host = "localhost";
+        $usern = "root";
+        $pass = "";
+        $dbname = "pesticide";
+        $con = mysqli_connect($host, $usern, $pass, $dbname);
+        $result=$cal->update($con);
+        $this->assertEquals(1, $result);
+    }
+    //Function to test user authentication
+    public function testcase6(){
+        $cal=new App\Test_php;
+        $host = "localhost";
+        $usern = "root";
+        $pass = "";
+        $dbname = "pesticide";
+        $con = mysqli_connect($host, $usern, $pass, $dbname);
+        $user="SELECT * from user_details where name='xyz@gmail.com' and password='abcd1234'";
+        $result=$cal->validate($con,$user);
+        $this->assertEquals(1, $result);
+    }
 
 }
